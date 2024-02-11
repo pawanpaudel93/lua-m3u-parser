@@ -2,7 +2,8 @@ rockspec_format = "3.0"
 package = "m3u-parser"
 version = "0.0.1-1"
 source = {
-   url = "https://github.com/pawanpaudel93/lua-m3u-parser"
+   url = "git://github.com/pawanpaudel93/lua-m3u-parser",
+   tag = "v0.0.1"
 }
 description = {
    summary = "A parser for m3u files.",
