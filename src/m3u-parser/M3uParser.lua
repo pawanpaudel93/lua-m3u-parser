@@ -451,7 +451,7 @@ function M3uParser(options)
             state.streamsInfo = state.streamsInfoBackup
             return self
         end,
-        removeByextension = function(self, extensions)
+        removeByExtension = function(self, extensions)
             return self:filterBy("url", extensions, { retrieve = false })
         end,
         retrieveByExtension = function(self, extensions)
