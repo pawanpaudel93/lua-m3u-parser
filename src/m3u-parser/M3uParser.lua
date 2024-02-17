@@ -8,10 +8,11 @@ local utils = require("utils");
 
 json.encode_escape_forward_slash(false)
 
-function M3uParser(useragent, timeout)
-    useragent = useragent or
+function M3uParser(options)
+    options = options or {}
+    local useragent = options.useragent or
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
-    timeout = timeout or 5
+    local timeout = options.timeout or 5
 
     local regexes = {
         tvgName = 'tvg%-name="([^"]*)"',
