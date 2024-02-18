@@ -20,24 +20,25 @@ Here is an example of how to use the M3uParser function:
 local M3uParser = require("m3u-parser")
 
 local url = "https://iptv-org.github.io/iptv/countries/np.m3u"
-local useragent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+local useragent =
+"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
 
-# Instantiate the parser
-local parser = M3uParser({ timeout=5, useragent=useragent })
+-- Instantiate the parser
+local parser = M3uParser({ timeout = 5, useragent = useragent })
 
-# Parse the m3u file
+-- Parse the m3u file
 parser:parseM3u(url)
 
-# Remove by mp4 extension
+-- Remove by mp4 extension
 parser:removeByExtension('mp4')
 
-# Filter streams by status
+-- Filter streams by status
 parser:filterBy('status', 'GOOD')
 
-# Get the table of streams
+-- Get the table of streams
 print(#parser:getList())
 
-# Convert streams to JSON and save to a file
+-- Convert streams to JSON and save to a file
 parser:toFile('streams.json')
 ```
 

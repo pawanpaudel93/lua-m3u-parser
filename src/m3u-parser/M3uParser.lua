@@ -193,14 +193,14 @@ function M3uParser(options)
             if country ~= nil or state.enforceSchema then
                 info.country = {
                     code = country,
-                    name = ""
+                    name = nil
                 }
             end
 
             local language = getByRegex(regexes.language, lineInfo)
             if language ~= nil or state.enforceSchema then
                 info.language = {
-                    code = "",
+                    code = nil,
                     name = language
                 }
             end
