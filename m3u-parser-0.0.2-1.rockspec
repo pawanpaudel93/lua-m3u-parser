@@ -1,9 +1,9 @@
 rockspec_format = "3.0"
 package = "m3u-parser"
-version = "0.0.1-1"
+version = "0.0.2-1"
 source = {
    url = "git://github.com/pawanpaudel93/lua-m3u-parser",
-   tag = "v0.0.1"
+   tag = "v0.0.2"
 }
 description = {
    summary = "A parser for m3u files.",
@@ -20,14 +20,14 @@ dependencies = {
    "http >= 0.4",
    "lusc_luv >= 3.1"
 }
-test_dependencies = {
-  "luaunit >= 3.4"
-}
 build = {
    type = "builtin",
    modules = {
       ["m3u-parser"] = "src/m3u-parser/M3uParser.lua"
    }
+}
+test_dependencies = {
+   "luaunit >= 3.4"
 }
 test = {
    type = "command",
