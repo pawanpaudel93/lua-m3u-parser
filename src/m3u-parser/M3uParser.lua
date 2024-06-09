@@ -1,10 +1,8 @@
-package.path = './src/m3u-parser/?.lua;' .. package.path
-
 local http = require('http.request');
 local lusc = require("lusc");
 local uv = require("luv");
 local json = require("cjson");
-local utils = require("utils");
+local utils = require("src.m3u-parser.utils");
 
 json.encode_escape_forward_slash(false)
 
