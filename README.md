@@ -1,6 +1,6 @@
 # lua-m3u-parser
 
-![version](https://img.shields.io/badge/version-0.0.2-blue.svg?cacheSeconds=2592000)
+![version](https://img.shields.io/badge/version-0.0.6-blue.svg?cacheSeconds=2592000)
 
 A Lua package for parsing m3u files and extracting streams information. The package allows you to convert the parsed information into JSON or M3u format and provides various filtering and sorting options.
 
